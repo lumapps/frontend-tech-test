@@ -6,7 +6,7 @@
     "@lumx/core": "0.25.15",
     "@lumx/icons": "0.25.15",
     "@lumx/react": "0.25.15",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.1.2",
