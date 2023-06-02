@@ -1,19 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { TextField, Theme } from '@lumx/react';
 import { mdiMagnify } from '@lumx/icons';
 
 
-const Search = () => {
-  const [search, setSearch] = useState('');
-
+const Search = ({ search, setSearch }) => {
+  /* Function to handle the search input */
   const handleSearch = (value) => {
-    console.log(value);
+    // console.log(value);
     setSearch(value);
   };
 
+  /* Function to handle the form submission */
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(search);
+    // console.log(search);
   };
 
   return (
@@ -27,6 +28,11 @@ const Search = () => {
 		/>
 	</form>
   );
+};
+
+Search.propTypes = {
+  search: PropTypes.string.isRequired,
+  setSearch: PropTypes.func.isRequired,
 };
 
 export default Search;

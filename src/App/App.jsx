@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from 'react';
+import React, { useState } from 'react';
 import './App.scss';
 import {
   BrowserRouter as Router,
@@ -9,10 +9,11 @@ import {
 import Header from '../components/Header';
 
 function App() {
+  const [search, setSearch] = useState('');
   return (
 	<>
 		<Router>
-			<Header />
+			<Header search={search} setSearch={setSearch} />
 			<Switch>
 				<Route
 					exact
