@@ -6,7 +6,9 @@ import { TextField, Theme } from '@lumx/react';
 import { mdiMagnify } from '@lumx/icons';
 
 
-const Search = ({ search, setSearch }) => {
+const Search = ({
+  search, setSearch, characters, setCharacters
+}) => {
   /* Function to handle the search input */
   const handleSearch = (value) => {
     // console.log(value);
@@ -24,12 +26,13 @@ const Search = ({ search, setSearch }) => {
       },
     })
       .then((response) => {
-        console.log(response.data.data.results);
+        setCharacters(response.data.data.results);
       })
       .catch((error) => {
         console.log(error);
       });
   };
+  console.log(characters);
 
   return (
 	<form className="form" onSubmit={handleSubmit}>
@@ -47,6 +50,8 @@ const Search = ({ search, setSearch }) => {
 Search.propTypes = {
   search: PropTypes.string.isRequired,
   setSearch: PropTypes.func.isRequired,
+  characters: PropTypes.arrayOf(PropTypes.object).isRequired,
+  setCharacters: PropTypes.func.isRequired,
 };
 
 export default Search;

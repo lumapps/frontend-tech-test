@@ -11,11 +11,17 @@ import Card from '../components/Card';
 
 function App() {
   const [search, setSearch] = useState('');
+  const [characters, setCharacters] = useState([]);
+  const charactersList = characters.map((character) => (
+	<Card key={character.id} picture={`${character.thumbnail.path}.${character.thumbnail.extension}`} name={character.name} description={character.description} comics={character.comics.available} series={character.series.available} stories={character.stories.available} />
+  ));
   return (
 	<>
 		<Router>
-			<Header search={search} setSearch={setSearch} />
-			<Card />
+			<Header search={search} setSearch={setSearch} characters={characters} setCharacters={setCharacters} />
+			<div className="list">
+				{charactersList}
+			</div>
 			<Switch>
 				<Route
 					exact

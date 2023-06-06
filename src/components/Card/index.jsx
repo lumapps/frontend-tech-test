@@ -1,21 +1,46 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { FlexBox, Alignment } from '@lumx/react';
 
 
-const Card = () => {
-
+const Card = ({
+  picture, name, description, comics, series, stories,
+}) => {
   return (
-	<header className="lumx-spacing-padding-big header">
-		<FlexBox vAlign={Alignment.spaceAround}>
-			<h1 className="lumx-typography-display1">React LumX</h1>
-		</FlexBox>
-	</header>
+	<FlexBox vAlign={Alignment.spaceAround}>
+		<div className="card">
+			<img className="card__picture" src={picture} alt={name} />
+			<h1 className="card__title">{name}</h1>
+			<p className="card__description">{description}</p>
+			<div className="card__info">
+				<p className="card__info__item">
+					# comics:
+					{' '}
+					{comics}
+				</p>
+				<p className="card__info__item">
+					# series:
+					{' '}
+					{series}
+				</p>
+				<p className="card__info__item">
+					# stories:
+					{' '}
+					{stories}
+				</p>
+			</div>
+		</div>
+	</FlexBox>
   );
 };
 
-/* Card.propTypes = {
-
-}; */
+Card.propTypes = {
+	  picture: PropTypes.string.isRequired,
+	  name: PropTypes.string.isRequired,
+	  description: PropTypes.string.isRequired,
+	  comics: PropTypes.number.isRequired,
+	  series: PropTypes.number.isRequired,
+	  stories: PropTypes.number.isRequired,
+};
 
 export default Card;
