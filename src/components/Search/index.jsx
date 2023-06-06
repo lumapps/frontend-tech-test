@@ -1,4 +1,6 @@
 import React from 'react';
+import axios from 'axios';
+import 'dotenv/config';
 import PropTypes from 'prop-types';
 import { TextField, Theme } from '@lumx/react';
 import { mdiMagnify } from '@lumx/icons';
@@ -14,7 +16,19 @@ const Search = ({ search, setSearch }) => {
   /* Function to handle the form submission */
   const handleSubmit = (event) => {
     event.preventDefault();
-    // console.log(search);
+    const apiKey = process.env.REACT_APP_MARVEL_API_KEY;
+    axios.get('https://gateway.marvel.com:443/v1/public/characters', {
+      params: {
+        nameStartsWith: search,
+        apikey: apiKey,
+      },
+    })
+      .then((response) => {
+        console.log(response.data.data.results);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (
