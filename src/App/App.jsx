@@ -7,6 +7,7 @@ import {
   Route,
 } from 'react-router-dom';
 import Header from '../components/Header';
+import Card from '../components/Card';
 
 function App() {
   const [search, setSearch] = useState('');
@@ -14,6 +15,7 @@ function App() {
 	<>
 		<Router>
 			<Header search={search} setSearch={setSearch} />
+			<Card />
 			<Switch>
 				<Route
 					exact
