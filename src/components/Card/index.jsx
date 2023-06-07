@@ -35,12 +35,12 @@ const Card = ({
 };
 
 Card.propTypes = {
-	  picture: PropTypes.string.isRequired,
-	  name: PropTypes.string.isRequired,
-	  description: PropTypes.string.isRequired,
-	  comics: PropTypes.number.isRequired,
-	  series: PropTypes.number.isRequired,
-	  stories: PropTypes.number.isRequired,
+  picture: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  comics: PropTypes.number.isRequired,
+  series: PropTypes.number.isRequired,
+  stories: PropTypes.number.isRequired,
 };
 
 export default Card;
