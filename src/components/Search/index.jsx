@@ -7,7 +7,7 @@ import { mdiMagnify } from '@lumx/icons';
 
 
 const Search = ({
-  search, setSearch, characters, setCharacters
+  search, setSearch, characters, setCharacters,
 }) => {
   /* Function to handle the search input */
   const handleSearch = (value) => {
