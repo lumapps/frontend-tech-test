@@ -44,7 +44,7 @@ const useFetch = (endpoint, params = {}, dependencies = []) => {
         }
     }
     fetchData()
-  }, []); //TO DO: include props.dependencies in dependencies array
+  }, [...dependencies]);
 
   return { data, loading, error}
 };

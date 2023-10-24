@@ -1,5 +1,5 @@
-const calculatePageNumber = (totalResults) => {
-    return Math.ceil(totalResults / 4)
+const calculatePageNumber = (totalResults, resultsParPage) => {
+    return Math.ceil(totalResults / resultsParPage)
 }
 
  export default calculatePageNumber

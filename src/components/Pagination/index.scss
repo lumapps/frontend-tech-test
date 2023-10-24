@@ -1,0 +1,34 @@
+.pagination {
+    margin: auto;
+    border: 3px solid lumx-color-variant('dark', 'L4');
+    border-radius: 4px;
+    padding: 6px 16px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    list-style: none;
+    &__number {
+        color: lumx-color-variant('dark', 'L3');
+        &:hover {
+            cursor: pointer;
+            color: lumx-color-variant('primary', 'L2');
+            font-weight: 700;
+        }
+        &--active {
+            color: lumx-color-variant('primary', 'N');
+            font-weight: 700;
+            cursor: default;
+        }
+        &--dots {
+            color: lumx-color-variant('dark', 'L3');
+            cursor: default;
+        }
+    }
+    &__button {
+        color: lumx-color-variant('dark', 'L1');
+        &:hover {
+            cursor: pointer;
+            color: lumx-color-variant('primary', 'L1');
+        }
+    }
+}
