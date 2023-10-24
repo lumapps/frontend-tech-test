@@ -1,17 +1,22 @@
 .character-card {
-    border: 3px solid  lumx-color-variant('primary', 'N');
+    border: 3px solid  lumx-color-variant('primary', 'L2');
     border-radius: 4px;
     padding: 16px;
     display: flex;
     flex-flow: row nowrap;
     gap: 16px;
-    & img {
-        width: 30%;
-        max-width: 200px;
-        max-height: 200px;
+    &__image-container {
+        min-width: 250px;
+        min-height: 250px;
+        max-width: 250px;
+        max-height: 250px;
+        overflow: hidden;
+        & > img {
+            width: 100%;
+            //TO DO: better management of non-square images
+        }
     }
     &__text-section {
-        width: 100%;
         display: flex;
         flex-flow: column nowrap;
         gap: 12px;

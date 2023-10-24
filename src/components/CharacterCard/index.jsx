@@ -3,10 +3,12 @@ import React from "react";
 const CharacterCard = ({ character }) => {
   return (
     <div className="character-card">
-      <img
-        alt={`${character.name}'s thumbnail`}
-        src={character.thumbnail.path + "." + character.thumbnail.extension}
-      />
+      <div className="character-card__image-container">
+        <img
+          alt={`${character.name}'s thumbnail`}
+          src={character.thumbnail.path + "." + character.thumbnail.extension}
+        />
+      </div>
       <div className="character-card__text-section">
         <h2>{character.name}</h2>
         <p>
