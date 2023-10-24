@@ -7,6 +7,7 @@ import {
   Route,
 } from 'react-router-dom';
 import Header from '../components/Header';
+import ListContainer from '../components/ListContainer';
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
 					exact
 					path="/"
 				>
-					<section className="lumx-spacing-padding-horizontal-huge" />
+					{/* <section className="lumx-spacing-padding-horizontal-huge" /> */}
+					<ListContainer/>
 				</Route>
 			</Switch>
 		</Router>
