@@ -34,22 +34,24 @@ const ListContainer = () => {
   );
 
   return !loading && !error ? (
-    <div className="list-container">
-      {data?.response?.data?.data.results
-        .slice(firstIndex, lastIndex) //Only when using placeholder
-        .map((item, index) => (
-          <CharacterCard key={item.id ?? index} character={item} /> //id is optionnal in database so index has been added to prevent key's absence
-        ))}
-      {data?.response?.data?.data.results.length > 4 && (
-        <Pagination
-          firstIndex={firstIndex}
-          lastIndex={lastIndex}
-          resultsPerPage={resultsPerPage}
-          pagesNumber={pagesNumber}
-          setCurrentPage={setCurrentPage}
-          currentPage={currentPage}
-        />
-      )}
+    <div className="list-page">
+      <div className="list-container">
+        {data?.response?.data?.data.results
+          .slice(firstIndex, lastIndex) //Only when using placeholder
+          .map((item, index) => (
+            <CharacterCard key={item.id ?? index} character={item} /> //id is optionnal in database so index has been added to prevent key's absence
+          ))}
+        {data?.response?.data?.data.results.length > 4 && (
+          <Pagination
+            firstIndex={firstIndex}
+            lastIndex={lastIndex}
+            resultsPerPage={resultsPerPage}
+            pagesNumber={pagesNumber}
+            setCurrentPage={setCurrentPage}
+            currentPage={currentPage}
+          />
+        )}
+      </div>
     </div>
   ) : (
     <p>Loading...</p> //TO DO: Switch to a real loading component
