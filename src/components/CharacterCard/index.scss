@@ -20,10 +20,24 @@
         display: flex;
         flex-flow: column nowrap;
         gap: 12px;
+        max-width: 70%;
         &--numbers-section {
             display: inline-flex;
             gap: 16px;
             font-weight: 600;
+            list-style: none;
+        }
+        & h2 {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        & > p {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 7;
+            -webkit-box-orient: vertical;
+            //TO DO: see more button
         }
     }
 }

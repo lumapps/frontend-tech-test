@@ -15,11 +15,11 @@ const CharacterCard = ({ character }) => {
           {character.description ||
             "This character description has yet to come !"}
         </p>
-        <div className="character-card__text-section--numbers-section">
-          <p>#comics: {character.comics.available}</p>
-          <p>#series: {character.series.available}</p>
-          <p>#stories: {character.stories.available}</p>
-        </div>
+        <ul className="character-card__text-section--numbers-section">
+          <li>#comics: {character.comics.available}</li>
+          <li>#series: {character.series.available}</li>
+          <li>#stories: {character.stories.available}</li>
+        </ul>
       </div>
     </div>
   );
