@@ -1,10 +1,14 @@
 import React from 'react';
 import Search from '../Search';
+// import logo from '../../logo.svg'
+//TO DO: use Marvel logo
 
-const Header = () => (
+const Header = () => {
+	return(
 	<header className="lumx-spacing-padding-big header">
-			<Search />
+		{/* <img src={logo} /> */}
+		<Search />
 	</header>
-);
+)};
 
 export default Header;
