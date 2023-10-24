@@ -1,0 +1,83 @@
+{
+    "response": {
+        "data": {
+            "data": {
+                "results":
+                [
+                    {
+                        "id": 0,
+                        "name": "Test",
+                        "description": "Test description",
+                        "thumbnail": {
+                            "path": "https://placehold.co/600x600/000000/FFFFFF",
+                            "extension": "png"
+                        },
+                        "comics": {
+                            "available": 10
+                        },
+                        "series": {
+                            "available": 5
+                        },
+                        "stories": {
+                            "available": 13
+                        }
+                    },
+                    {
+                        "id": 1,
+                        "name": "Test",
+                        "description": "Test description",
+                        "thumbnail": {
+                            "path": "https://placehold.co/600x400/000000/FFFFFF",
+                            "extension": "png"
+                        },
+                        "comics": {
+                            "available": 10
+                        },
+                        "series": {
+                            "available": 5
+                        },
+                        "stories": {
+                            "available": 13
+                        }
+                    },
+                    {
+                        "id": 2,
+                        "name": "Test",
+                        "description": "Test description",
+                        "thumbnail": {
+                            "path": "https://placehold.co/400x600/000000/FFFFFF",
+                            "extension": "png"
+                        },
+                        "comics": {
+                            "available": 10
+                        },
+                        "series": {
+                            "available": 5
+                        },
+                        "stories": {
+                            "available": 13
+                        }
+                    },
+                    {
+                        "id": 3,
+                        "name": "Test",
+                        "description": "Test description",
+                        "thumbnail": {
+                            "path": "https://placehold.co/600x600/000000/FFFFFF",
+                            "extension": "png"
+                        },
+                        "comics": {
+                            "available": 10
+                        },
+                        "series": {
+                            "available": 5
+                        },
+                        "stories": {
+                            "available": 13
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}
