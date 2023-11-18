@@ -7,6 +7,7 @@
     "@lumx/icons": "3.5.4",
     "@lumx/react": "3.5.4",
     "axios": "^0.27.2",
+    "lodash": "^4.17.21",
     "moment": "^2.24.0",
     "moment-range": "^4.0.2",
     "react": "^16.13.1",
@@ -18,8 +19,18 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "@types/jest": "^29.5.8",
+    "@types/lodash": "^4.14.201",
+    "@types/node": "^20.9.1",
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "@types/react-router-dom": "^5.3.3",
+    "@typescript-eslint/eslint-plugin": "^6.11.0",
+    "@typescript-eslint/parser": "^6.11.0",
     "eslint-config-airbnb": "^18.0.1",
-    "sass": "^1.69.4"
+    "eslint-config-airbnb-typescript": "^17.1.0",
+    "sass": "^1.69.4",
+    "typescript": "^5.2.2"
   },
   "scripts": {
     "start": "react-scripts start",

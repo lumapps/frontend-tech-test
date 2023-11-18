@@ -1,9 +1,12 @@
 {
+  "plugins": ["react", "@typescript-eslint"],
   "extends": [
     "airbnb",
     "airbnb/hooks",
+    "airbnb-typescript",
     "eslint:recommended",
-    "react-app"
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended"
   ],
   "env": {
     "browser": true,
@@ -13,19 +16,27 @@
   },
   "parserOptions": {
     "ecmaVersion": 2018,
-    "sourceType": "module"
+    "sourceType": "module",
+    "project": "./tsconfig.json"
   },
   "rules": {
     "curly": "warn",
-    "react/jsx-indent": [
-      2,
-      "tab"
-    ],
-    "react/jsx-indent-props": [
-      2,
-      "tab"
-    ],
+    "import/prefer-default-export": "off",
     "no-tabs": "off",
-    "max-len": "off"
+    "max-len": "off",
+    "implicit-arrow-linebreak": "off",
+    "object-curly-newline": "off",
+    "react/jsx-indent": "off",
+    "react/jsx-indent-props": "off",
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".jsx", ".tsx"]
+      }
+    ],
+    "react/jsx-one-expression-per-line": "off",
+    "@typescript-eslint/indent": "off",
+    "@typescript-eslint/semi": "off",
+    "@typescript-eslint/comma-dangle": "off"
   }
 }
