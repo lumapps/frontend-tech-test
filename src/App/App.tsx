@@ -3,19 +3,21 @@ import React from 'react'
 import './App.scss'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Header from '../components/Header'
+import { ListCharacters } from '../pages/ListCharacters'
+import { SearchProvider } from '../components/Search'
 
 function App() {
   return (
-    <>
+    <SearchProvider>
       <Router>
         <Header />
         <Switch>
           <Route exact path="/">
-            <section className="lumx-spacing-padding-horizontal-huge" />
+            <ListCharacters />
           </Route>
         </Switch>
       </Router>
-    </>
+    </SearchProvider>
   )
 }
 
