@@ -1,25 +1,38 @@
 import React from 'react';
 
-import { FlexBox, Thumbnail, TextField, Theme } from '@lumx/react';
-import { mdiMagnify } from '@lumx/icons';
+import { Thumbnail, TextField } from '@lumx/react';
 
-import styles from './Header.module.scss'; 
-import logo from '../../assets/logo.png'; 
+import './index.scss';
+import logo from '../../assets/logo.png';
 
-export const Header: React.FC = () => {
+interface HeaderProps {
+  searchQuery: string;
+  onSearchChange: (value: string) => void;
+  onSearchSubmit: () => void;
+}
+
+export const Header: React.FC<HeaderProps> = ({ searchQuery, onSearchChange, onSearchSubmit }) => {
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === 'Enter') {
+      onSearchSubmit();
+    }
+  };
+
   return (
-    <header className={styles.header}>
-      
-      <FlexBox className={styles.logo} orientation="horizontal" vAlign="space-between" hAlign="center">
-        <Thumbnail 
-          image={logo}
-          className={styles.logo}
-          alt="My Static App Logo"
-        />
-
-        <TextField theme={Theme.light} icon={mdiMagnify} onChange={() => {}} label="Search" />
-      </FlexBox>
-      
+    <header className="header">
+      <Thumbnail
+        image={logo}
+        className="header__logo"
+        alt="Star Wars Logo"
+      />
+      <TextField
+        value={searchQuery}
+        onChange={onSearchChange}
+        onKeyDown={handleKeyDown}
+        placeholder="Search for a character..."
+        icon="magnify"
+        className="header__search-field"
+      />
     </header>
   );
 };
